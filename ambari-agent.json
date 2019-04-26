@@ -1,0 +1,29 @@
+{
+    "ambari_agent_log" : {
+        "title" : "Ambari Agents log format",
+        "description" : "Log format used in the ambari-agents",
+        "url" : "http://example.com/log-format.html",
+        "regex" : {
+            "basic" : {
+                "pattern" : "^^(?<level>\\w+) (?<timestamp>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\,\\d{3}) (?<component>\\w+)(?<body>.*)$"
+            }
+        },
+        "level-field" : "level",
+        "level" : {
+            "error" : "ERROR",
+            "warning" : "WARNING",
+            "info": "INFO"
+        },
+        "value" : {
+            "component" : {
+                "kind" : "string",
+                "identifier" : true
+            }
+        },
+        "sample" : [
+            {
+                "line" : "INFO 2019-04-25 11:47:53,218 __init__.py:82 - Event from server at /user/ (correlation_id=456): {u'status': u'OK'}"
+            }
+        ]
+    }
+}
