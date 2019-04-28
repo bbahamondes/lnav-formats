@@ -1,0 +1,31 @@
+{
+    "example_log" : {
+        "title" : "Zeppelin interpreter log formats",
+        "description" : "Log format for zeppelin interpreter logs",
+        "url" : "http://example.com/log-format.html",
+        "regex" : {
+            "basic" : {
+                "pattern" : "^(?<level>\\w+) \\[(?<timestamp>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\,\\d{3})\\] \\(\\{(?<poolthread>.*)\\} (?<component>.*)\\[.*\\) \\- (?<body>.*)$$"
+            }
+        },
+        "level-field" : "level",
+        "level" : {
+            "error" : "ERROR",
+            "warning" : "WARN",
+            "info" : "INFO",
+            "debug" : "Debug"
+        },
+        "value" : {
+            "component" : {
+                "kind" : "string",
+                "identifier" : true
+            }
+        },
+        "sample" : [
+            {
+                "line": "INFO [2019-04-07 05:50:18,045] ({pool-2-thread-2} LivySharedInterpreter.java[open]:57) - LivySharedInterpreter is supported."
+            
+            }
+        ]
+    }
+}
