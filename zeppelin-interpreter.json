@@ -5,7 +5,7 @@
         "url" : "http://example.com/log-format.html",
         "regex" : {
             "basic" : {
-                "pattern" : "^(?<level>\\w+) \\[(?<timestamp>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\,\\d{3})\\] \\(\\{(?<poolthread>.*)\\} (?<component>.*)\\[.*\\) \\- (?<body>.*)$$"
+                "pattern" : "^\\s*(?<level>\\w+) \\[(?<timestamp>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\,\\d{3})\\] \\(\\{(?<poolthread>.*)\\} (?<component>.*)\\[.*\\) \\- (?<body>.*)\\s*$"
             }
         },
         "level-field" : "level",
