@@ -1,5 +1,5 @@
 {
-    "ambari_agent_log" : {
+    "nifi_app_log" : {
         "title" : "Nifi app log format",
         "description" : "Log format used in the Nifi app logs",
         "url" : "http://example.com/log-format.html",
