@@ -1,0 +1,30 @@
+{
+    "ambari_agent_log" : {
+        "title" : "Nifi app log format",
+        "description" : "Log format used in the Nifi app logs",
+        "url" : "http://example.com/log-format.html",
+        "regex" : {
+            "basic" : {
+                "pattern" : "^(?<timestamp>\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\,\\d{3}) (?<level>\\w+) \\[(?<component>[\\w-  \\d]*)\\] (?<body>.*)$"
+            }
+        },
+        "level-field" : "level",
+        "level" : {
+            "error" : "ERROR",
+            "warning" : "WARNING",
+            "info": "INFO",
+            "debug": "DEBUG"
+        },
+        "value" : {
+            "component" : {
+                "kind" : "string",
+                "identifier" : true
+            }
+        },
+        "sample" : [
+            {
+                "line" : "2019-08-08 17:43:40,224 INFO [Clustering Tasks Thread-2] o.a.n.c.c.ClusterProtocolHeartbeater Heartbeat created at 2019-08-08 17:43:40,084 and sent to bbahamondes-4.hwx.com:9088 at 2019-08-08 17:43:40,224; send took 140 millis"
+            }
+        ]
+    }
+}
