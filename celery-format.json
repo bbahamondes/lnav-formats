@@ -39,31 +39,31 @@
                 "prefix": "[data=",
                 "field": "data",
                 "suffix": "]"
-            },"",
+            }," ",
             {
                 "field": "data/byte_count"
-            },"",
+            }," ",
             {
                 "field": "data/result_id"
-            },"",
+            }," ",
             {
                 "field": "data/row_count"
-            },"",
+            }," ",
             {
                 "field": "data/logger"
-            },"",
+            }," ",
             {
                 "field": "data/caller"
-            },"",
+            }," ",
             {
                 "field": "data/dd.trace_id"
-            },"",
+            }," ",
             {
                 "field": "data/dd.span_id"
-            },"",
+            }," ",
             {
                 "field": "data/dd.env"
-            },""
+            }," "
         ],
         "value":{
             "header/timestamp":{
