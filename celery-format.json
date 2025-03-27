@@ -1,0 +1,114 @@
+{
+    "$schema": "https://lnav.org/schemas/format-v1.schema.json",
+    "alation_json_log": {
+        "title": "Alation Json Log",
+        "description": "Alation Enterprise detailed logs of metadata",
+        "file-type": "json",
+        "hide-extra": true,
+        "ordered-by-time": false,
+        //"body-field": "data",
+        "timestamp-field": "header/timestamp",
+        "level-field": "header/loglevel",
+        "level": {
+            "info": "INFO",
+            "error": "ERROR",
+            "warning": "WARN",
+            "debug": "DEBUG"
+        },
+        "line-format": [
+            {
+                "field": "header/timestamp"
+            }, " ",
+            {
+                "field": "header/loglevel"
+            }, " ",
+            {
+                "field": "header/tenantid"
+            }," ",
+            {
+                "prefix": "[appname=",
+                "field": "header/appname",
+                "suffix": "]"
+            }," ",
+            {
+                "prefix": "[instanceurl=",
+                "field": "header/instanceurl",
+                "suffix": "]"
+            }," ",
+            {
+                "prefix": "[data=",
+                "field": "data",
+                "suffix": "]"
+            },"",
+            {
+                "field": "data/byte_count"
+            },"",
+            {
+                "field": "data/result_id"
+            },"",
+            {
+                "field": "data/row_count"
+            },"",
+            {
+                "field": "data/logger"
+            },"",
+            {
+                "field": "data/caller"
+            },"",
+            {
+                "field": "data/dd.trace_id"
+            },"",
+            {
+                "field": "data/dd.span_id"
+            },"",
+            {
+                "field": "data/dd.env"
+            },""
+        ],
+        "value":{
+            "header/timestamp":{
+                "kind": "string"
+            },
+            "header/loglevel":{
+                "kind": "string"
+            },
+            "header/tenantid": {
+                "kind": "string"
+            },
+            "header/appname": {
+                "kind": "string"
+            },
+            "header/instanceurl": {
+                "kind": "string"
+            },
+            "data":{
+                "kind":"json"
+            },
+            "data/byte_count": {
+                "kind": "string"
+            },
+            "data/result_id": {
+                "kind": "string"
+            },
+            "data/row_count": {
+                "kind": "string"
+            },
+            "data/logger": {
+                "kind": "string"
+            },
+            "data/caller": {
+                "kind": "string"
+            },
+            "data/dd.trace_id": {
+                "kind": "string"
+            },
+            "data/dd.span_id": {
+                "kind": "string"
+            },
+            "data/dd.env": {
+                "kind": "string"
+            }
+        }
+        
+    }
+}
