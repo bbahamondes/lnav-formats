@@ -1,0 +1,65 @@
+//{"message": "Aggregating metadata change stats...", "caller": "./server/db_metadata/tasks.py:249", "timestamp": "2025-03-21T14:02:17.187420Z", "level": "INFO"}
+{
+    "$schema": "https://lnav.org/schemas/format-v1.schema.json",
+    "alation_onprem_json_log": {
+        "title": "Alation OnPremise Json Log",
+        "description": "Alation OnPremise detailed logs of metadata",
+        "file-type": "json",
+        "hide-extra": true,
+        "ordered-by-time": false,
+        //"body-field": "data",
+        "timestamp-field": "timestamp",
+        "level-field": "level",
+        "level": {
+            "info": "INFO",
+            "error": "ERROR",
+            "warning": "WARN",
+            "debug": "DEBUG"
+        },
+        "line-format": [
+            {
+                "field": "timestamp"
+            }, " ",
+            {
+                "field": "level"
+            }, " ",
+            {
+                "prefix": "[caller=",                
+                "field": "caller",
+                "suffix": "]"
+
+            }," ",
+            {
+                "prefix": "[message=",
+                "field": "message",
+                "suffix": "]"
+            }," ",
+            {
+                "prefix": "[data=",
+                "field": "data",
+                "suffix": "]"
+            }," "
+        ],
+        "value":{
+            "timestamp":{
+                "kind": "string"
+            },
+            "level":{
+                "kind": "string"
+            },
+            "caller": {
+                "kind": "string"
+            },
+            "message": {
+                "kind": "string"
+            },
+            "data": {
+                "kind": "string"
+            },
+            "data":{
+                "kind":"json"
+            }
+        }
+        
+    }
+}
