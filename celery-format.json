@@ -23,7 +23,10 @@
                 "field": "header/loglevel"
             }, " ",
             {
-                "field": "header/tenantid"
+                "prefix": "[tenantid=",                
+                "field": "header/tenantid",
+                "suffix": "]"
+
             }," ",
             {
                 "prefix": "[appname=",

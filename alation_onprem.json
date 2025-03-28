@@ -34,10 +34,21 @@
                 "suffix": "]"
             }," ",
             {
+                "prefix": "[traceback=",
+                "field": "data/traceback",
+                "suffix": "]"
+            }," ",
+            {
+                "prefix": "[exc_info=",
+                "field": "exc_info",
+                "suffix": "]"
+            }," ",
+            {
                 "prefix": "[data=",
                 "field": "data",
                 "suffix": "]"
-            }," "
+            }
+            
         ],
         "value":{
             "timestamp":{
@@ -52,11 +63,14 @@
             "message": {
                 "kind": "string"
             },
+            "data/traceback": {
+                "kind":"quoted"
+            },
+            "exc_info": {
+                "kind": "quoted"
+            },
             "data": {
                 "kind": "string"
-            },
-            "data":{
-                "kind":"json"
             }
         }
         
